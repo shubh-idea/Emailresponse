@@ -6,8 +6,8 @@ import seaborn as sns
 import imaplib,email
 
 
-user = 'shubham_salunke@idealake.com'
-password = 'Salunke$%$idealake'
+user = 'yourmail@gmail.com.com'
+password = 'yourpass'
 imap_url = 'imap.gmail.com'
 
 
@@ -52,7 +52,7 @@ raw=email.message_from_bytes(data[0][1])
 print(raw)
 
 #Search operation
-msgs=get_emails(search('FROM','snehal_waral@idealake.com',con))
+msgs=get_emails(search('FROM','sender_id',con))
 for msg in msgs:
     print(get_body(email.message_from_bytes(msg[0][1])))
 
